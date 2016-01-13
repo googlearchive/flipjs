@@ -61,10 +61,10 @@ let flip = new FLIP({
 });
 ```
 
-## Documentation
+## Documentation & Demos
 
-You can find the full breakdown in
-[the API docs](https://googlechrome.github.io/flipjs/docs/FLIP.html).
+  * [Demos](https://googlechrome.github.io/flipjs/).
+  * [API docs](https://googlechrome.github.io/flipjs/docs/FLIP.html).
 
 ## New to FLIP?
 
