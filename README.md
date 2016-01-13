@@ -1,6 +1,6 @@
 # FLIP.js
 
-A helper library for FLIP animations.
+A helper library for [FLIP animations](https://aerotwist.com/blog/flip-your-animations).
 
 FLIP is an approach to animations that remaps animating expensive properties, like width, height, left and top to significantly cheaper changes using transforms. It does this by taking two snapshots, one of the element's **First** position (F), another of its **Last** position (L). It then uses a transform to **Invert** (I) the element's changes, such that the element appears to still be in the First position. Lastly it **Plays** (P) the animation forward by removing the transformations applied in the Invert step.
 
@@ -27,11 +27,11 @@ flip.play();
 
 ## Documentation
 
-You can find the full breakdown in the [https://googlechrome.github.io/flipjs/docs](API docs).
+You can find the full breakdown in the [http://googlechrome.github.io/flipjs/docs/FLIP.html](API docs).
 
 ## New to FLIP?
 
-For more see [https://aerotwist.com/blog/flip-your-animations](the FLIP intro).
+For more background info take a look at [https://aerotwist.com/blog/flip-your-animations](the FLIP intro).
 
 License: Apache 2.0 - See [/LICENSE](/LICENSE)
 Author: paullewis
