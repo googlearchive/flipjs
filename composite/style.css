@@ -1,0 +1,167 @@
+/**
+ *
+ * Copyright 2015 Google Inc. All rights reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+html, body {
+  width: 100%;
+  height: 100%;
+  background: #1D1D1D;
+  padding: 0;
+  margin: 0;
+  color: #555;
+  font-family: Arial;
+}
+
+.material-icons {
+  /* Remove ligatures since they trigger layout in Chrome: crbug.com/577211.
+     Using only code points instead. */
+  -webkit-font-feature-settings: initial;
+}
+
+.close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  color: #FFF;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.close.last {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.item {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding-top: 40px;
+  top: 20px;
+}
+
+.item__header {
+  position: relative;
+}
+
+.item__header-underlay {
+  background: #842844;
+  width: 160px;
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  margin-left: -80px;
+  top: 0;
+  z-index: 1;
+}
+
+.item__header-underlay.last {
+  height: 240px;
+  width: 100%;
+  left: 0;
+  margin: 0;
+}
+
+.item img {
+  position: relative;
+  left: 50%;
+  margin-left: -80px;
+  width: 160px;
+  display: block;
+  z-index: 3;
+  cursor: pointer;
+}
+
+.item img.last {
+  left: 0;
+  margin: 0;
+  width: 240px;
+  cursor: default;
+}
+
+.item.last {
+  width: 100%;
+  max-width: 600px;
+  height: 100%;
+}
+
+.item__underlay {
+  background: #FFF;
+  width: 160px;
+  height: 160px;
+  position: relative;
+  left: 50%;
+  margin: -160px 0 0 -80px;
+}
+
+.item__underlay.last {
+  height: calc(100% - 240px);
+  width: 100%;
+  max-width: 600px;
+  left: auto;
+  top: auto;
+  margin: 0 auto;
+  z-index: 0;
+}
+
+.item__title {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  height: 240px;
+  line-height: 240px;
+  color: #FFF;
+  font-size: 36px;
+  font-weight: 300;
+  z-index: 2;
+  margin: 0;
+}
+
+.item__title.last {
+  left: 272px;
+  opacity: 1;
+}
+
+.item__list {
+  opacity: 0;
+  list-style: none;
+  width: 100%;
+  padding: 0;
+  margin: 0 auto 0 auto;
+  margin-top: -100px;
+  max-width: 600px;
+  position: relative;
+}
+
+.item__list li {
+  height: 48px;
+  border-bottom: 1px solid rgba(0,0,0,0.12);
+  line-height: 48px;
+  box-sizing: border-box;
+  padding: 0 16px;
+}
+
+.item__list.last {
+  opacity: 1;
+  top: 0;
+  margin-top: calc(-100vh + 280px);
+}

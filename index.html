@@ -15,13 +15,89 @@ See the License for the specific language governing permissions and
 limitations under the License.
 
 -->
+
 <!doctype html>
 <html>
 <head>
-  <meta http-equiv="refresh" content="3;https://googlechrome.github.io/flipjs/docs">
-  <title>Redirecting...</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="author" content="Paul Lewis" />
+  <meta name="viewport" content="width=device-width">
+  <meta name="theme-color" content="#880043">
+  <title>FLIP - Demos</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="demos.css">
+  <link rel="stylesheet" href="third_party/github-gist.css">
 </head>
 <body>
+
+  <nav class="nav">
+    <div class="nav__header">
+      <h1>FLIP Demos</h1>
+    </div>
+    <ul>
+      <li><a href="./hello-world/" target="demo">1. Hello World</a></li>
+      <li><a href="./GSAP/" target="demo">2. GSAP</a></li>
+      <li><a href="./composite/" target="demo">3. Composite</a></li>
+    </ul>
+    <a class="docs" href="../docs/FLIP.html" target="demo">Docs</a>
+  </nav>
+
+  <div class="code">
+    <pre><code class='javascript'></code>
+  </div>
+
+  <main>
+    <button class="show-code material-icons">code</button>
+    <iframe seamless frameBorder='0' name="demo"></iframe>
+  </main>
+
+  <script src="third_party/highlight.pack.js"></script>
+  <script>
+    var codeButton = document.querySelector('.show-code');
+    var codeBlockContainer = document.querySelector('.code');
+    var codeBlockInnerContainer = codeBlockContainer.querySelector('pre');
+    var codeBlock = codeBlockContainer.querySelector('code');
+    var links = document.querySelectorAll('nav a');
+
+    var onClick = function (evt) {
+
+      if (evt.target.href.indexOf('docs') >= 0) {
+        codeButton.style.display = 'none';
+        return;
+      }
+
+      var xhr = new XMLHttpRequest();
+      xhr.open('GET', evt.target.href + 'demo.js', true);
+      xhr.onreadystatechange = function () {
+        if (xhr.status === 200) {
+          codeButton.style.display = 'block';
+          codeBlock.innerText = xhr.responseText;
+          hljs.highlightBlock(codeBlock);
+        }
+      }
+      xhr.send();
+    };
+
+    codeBlockInnerContainer.addEventListener('click', function(evt) {
+      evt.stopImmediatePropagation();
+    });
+
+    codeBlockContainer.addEventListener('click', function(evt) {
+      codeBlockContainer.classList.remove('visible');
+    });
+
+    codeButton.addEventListener('click', function(evt) {
+      if (codeBlockContainer.classList.contains('visible'))
+        codeBlockContainer.classList.remove('visible');
+      else
+        codeBlockContainer.classList.add('visible');
+    });
+
+    for (var l = 0; l < links.length; l++) {
+      links[l].addEventListener('click', onClick);
+    }
+  </script>
 
 </body>
 </html>
