@@ -28,13 +28,13 @@ var itemUnderlay = document.querySelector('.item__underlay');
 var itemList = document.querySelector('.item__list');
 
 // From Tween.js (MIT license)
-// @see https://github.com/tweenjs/tween.js/blob/master/src/Tween.js#L480-L484
+// @see https://github.com/tweenjs/tween.js/blob/master/src/Tween.js
 var timingFunctionExpand = function (t) {
   return --t * t * t * t * t + 1;
 };
 
 // From Tween.js (MIT license)
-// @see https://github.com/tweenjs/tween.js/blob/master/src/Tween.js#L480-L484
+// @see https://github.com/tweenjs/tween.js/blob/master/src/Tween.js
 var timingFunctionCollapse = function (t) {
   if ((t *= 2) < 1) {
     return 0.5 * t * t * t * t * t;
