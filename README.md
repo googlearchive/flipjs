@@ -34,6 +34,8 @@ You can find the full breakdown in
 
 For more background info take a look at [the FLIP intro](https://aerotwist.com/blog/flip-your-animations) post.
 
-License: Apache 2.0 - See [/LICENSE](/LICENSE)
-Author: paullewis
+License: Apache 2.0 - See [/LICENSE](/LICENSE).
+
+Author: paullewis.
+
 Please note: this is not an official Google product.
