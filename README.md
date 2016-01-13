@@ -27,7 +27,7 @@ flip.play();
 
 ## Documentation
 
-You can find the full breakdown in the [https://googlechrome.github.io/flipjs](API docs).
+You can find the full breakdown in the [https://googlechrome.github.io/flipjs/docs](API docs).
 
 ## New to FLIP?
 
