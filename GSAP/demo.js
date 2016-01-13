@@ -21,13 +21,9 @@
 
 var target = document.querySelector('.target');
 
-// Use GSAP for the animation. You should ensure that TweenMax / TweenLite + the
-// CSSPlugin are loaded before you try and FLIP anything.
-// FLIP.use('GSAP');
-
 target.addEventListener('click', function () {
 
-  // Set up the FLIP, using the GSAP Bounce easeOut easing function.
+  // Set up the FLIP, using GSAP and the Bounce easeOut easing function.
   var flip = new FLIP({
     element: target,
     duration: 2000,
