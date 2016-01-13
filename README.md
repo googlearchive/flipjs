@@ -6,6 +6,8 @@ FLIP is an approach to animations that remaps animating expensive properties, li
 
 ## Usage
 
+You can use the FLIP helper on its own, like this:
+
 ```javascript
 let flip = new FLIP({
   element: target,
@@ -23,6 +25,38 @@ flip.invert();
 
 // Play it forwards.
 flip.play();
+```
+
+### Using GSAP.
+
+If you've already got [GSAP](http://greensock.com/gsap) in place, you may wish for it to handle playback. In which case, you can declare that in the config object:
+
+```javascript
+let flip = new FLIP({
+  element: target,
+  duration: 2000,
+  play: 'GSAP'
+});
+```
+
+### Specifying timing functions
+
+You can either specify your own function, or, if you're using GSAP, you can use its easing functions:
+
+```javascript
+// Declare an easing function directly.
+let flip = new FLIP({
+  element: target,
+  easing: function (t) {
+    return t * t;
+  }
+});
+
+// ... or declare an easing function from GSAP.
+let flip = new FLIP({
+  element: target,
+  easing: Bounce.easeOut
+});
 ```
 
 ## Documentation
