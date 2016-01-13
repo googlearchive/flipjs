@@ -27,11 +27,12 @@ flip.play();
 
 ## Documentation
 
-You can find the full breakdown in the [http://googlechrome.github.io/flipjs/docs/FLIP.html](API docs).
+You can find the full breakdown in
+[the API docs](https://googlechrome.github.io/flipjs/docs/FLIP.html).
 
 ## New to FLIP?
 
-For more background info take a look at [https://aerotwist.com/blog/flip-your-animations](the FLIP intro).
+For more background info take a look at [the FLIP intro](https://aerotwist.com/blog/flip-your-animations) post.
 
 License: Apache 2.0 - See [/LICENSE](/LICENSE)
 Author: paullewis
