@@ -183,7 +183,7 @@ export default class FLIP {
       if (typeof config.easing.getRatio !== 'undefined') {
         config.easing = config.easing.getRatio;
       } else {
-        throw new Error('Element must be provided.');
+        throw new Error('Easing function must be provided.');
       }
     }
 
