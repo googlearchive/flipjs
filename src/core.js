@@ -102,19 +102,13 @@ export default class FLIP {
 
       flips_: flips,
 
-      addClass: (className) => {
-        flips.forEach(flip => flip.addClass(className));
-      },
+      addClass: className => flips.forEach(flip => flip.addClass(className)),
 
-      removeClass: (className) => {
-        flips.forEach(flip => flip.removeClass(className));
-      },
+      removeClass: className => flips.forEach(flip => flip.removeClass(className)),
 
-      first: () => {
-        flips.forEach(flip => flip.first());
-      },
+      first: () => flips.forEach(flip => flip.first()),
 
-      last: (lastClassName) => {
+      last: lastClassName => {
 
         // To avoid layout thrashing apply all the classes up front
         // then do a second pass where last() is called.
@@ -133,11 +127,9 @@ export default class FLIP {
         flips.forEach(flip => flip.last());
       },
 
-      invert: () => {
-        flips.forEach(flip => flip.invert());
-      },
-
-      play: (startTime) => {
+      invert: () => flips.forEach(flip => flip.invert()),
+      
+      play: startTime => {
 
         if (typeof startTime === 'undefined')
           startTime = window.performance.now();
