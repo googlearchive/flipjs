@@ -15,9 +15,11 @@
  */
 
 import Core from './core';
+import CSS from './css';
 import rAF from './raf';
 import GSAP from './gsap';
 
+Core.extend('CSS', CSS);
 Core.extend('rAF', rAF);
 Core.extend('GSAP', GSAP);
 

@@ -39,6 +39,18 @@ export default {
     else
       throw new Error('GSAP requested, but TweenMax/Lite not available.');
 
+    // If the easing property is not a function, check for a TweenMax/Lite style
+    // object with a getRatio function, and, if that exists, use it, otherwise
+    // throw an error.
+    if (this.easing_ === 'linear') {
+      this.easing_ = t => t;
+    } else if (typeof this.easing_ !== 'function') {
+      if (typeof this.easing_.getRatio !== 'undefined')
+        this.easing_ = this.easing_.getRatio;
+      else
+        throw new Error('Easing function must be provided.');
+    }
+
     let options = {
       ease: this.easing_,
       onComplete: this.cleanUpAndFireEvent_.bind(this)
