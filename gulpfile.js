@@ -30,6 +30,7 @@ var gulp = require('gulp'),
     license = require('gulp-license'),
     replace = require('gulp-replace'),
     bump = require('gulp-bump'),
+    eslint = require('eslint'),
     shell = require('gulp-shell');
 var version = null;
 
@@ -130,3 +131,5 @@ gulp.task('docs', shell.task(
 gulp.task('dev', function() {
   return runSequence('clean', 'getversion', 'scripts', 'watch');
 });
+
+gulp.task('lint', shell.task(['npm run lint']));

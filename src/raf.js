@@ -26,6 +26,10 @@ export default {
    *  FLIP animations.
    */
   play_: function (startTime) {
+    if (this.easing_ === 'linear')
+      this.easing_ = t => t;
+    else if (typeof this.easing_ !== 'function')
+      throw new Error('An easing function must be provided.');
 
     if (typeof startTime === 'undefined')
       this.start_ = window.performance.now() + this.delay_;
@@ -60,14 +64,12 @@ export default {
          scale(${update.sx}, ${update.sy})`;
     }
 
-    if (this.updateOpacity_) {
+    if (this.updateOpacity_)
       this.element_.style.opacity = update.a;
-    }
 
-    if (time < 1) {
+    if (time < 1)
       requestAnimationFrame(this.update_);
-    } else {
+    else
       this.cleanUpAndFireEvent_();
-    }
   }
 };

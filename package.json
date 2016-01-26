@@ -4,16 +4,19 @@
   "description": "A FLIP helper",
   "main": "index.js",
   "scripts": {
+    "lint": "eslint --fix src/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "Paul Lewis [Google]",
   "license": "Apache-2.0",
   "devDependencies": {
+    "babel-eslint": "^4.1.6",
     "babel-preset-es2015": "^6.1.18",
     "babelify": "^7.2.0",
     "browserify": "^12.0.1",
     "del": "^2.1.0",
+    "eslint": "^1.10.3",
     "gulp": "^3.9.0",
     "gulp-bump": "^1.0.0",
     "gulp-license": "^1.0.0",

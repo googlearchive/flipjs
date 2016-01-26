@@ -144,7 +144,7 @@ export default class FLIP {
 
         flips.forEach(flip => flip.play(startTime));
       }
-    }
+    };
   }
 
   /**
@@ -165,7 +165,7 @@ export default class FLIP {
     let defaults = {
       duration: 330,
       delay: 0,
-      easing: function (t) { return t; },
+      easing: 'linear',
       transform: true,
       opacity: true,
       play: 'rAF'
@@ -176,16 +176,6 @@ export default class FLIP {
     if (typeof config.element === 'undefined')
       throw new Error('Element must be provided.');
 
-    // If the easing property is not a function, check for a TweenMax/Lite style
-    // object with a getRatio function, and, if that exists, use it, otherwise
-    // throw an error.
-    if (typeof config.easing !== 'function') {
-      if (typeof config.easing.getRatio !== 'undefined') {
-        config.easing = config.easing.getRatio;
-      } else {
-        throw new Error('Easing function must be provided.');
-      }
-    }
 
     this.element_ = config.element;
     this.first_ = {
