@@ -54,7 +54,7 @@ html, body {
   max-width: 600px;
   margin: 0 auto;
   box-sizing: border-box;
-  padding-top: 40px;
+  padding-top: 60px;
   top: 20px;
 }
 
@@ -64,17 +64,17 @@ html, body {
 
 .item__header-underlay {
   background: #842844;
-  width: 160px;
+  width: 100px;
   height: 100%;
   position: absolute;
   left: 50%;
-  margin-left: -80px;
+  margin-left: -50px;
   top: 0;
   z-index: 1;
 }
 
 .item__header-underlay.last {
-  height: 240px;
+  height: 140px;
   width: 100%;
   left: 0;
   margin: 0;
@@ -83,8 +83,8 @@ html, body {
 .item img {
   position: relative;
   left: 50%;
-  margin-left: -80px;
-  width: 160px;
+  margin-left: -50px;
+  width: 100px;
   display: block;
   z-index: 3;
   cursor: pointer;
@@ -93,7 +93,7 @@ html, body {
 .item img.last {
   left: 0;
   margin: 0;
-  width: 240px;
+  width: 140px;
   cursor: default;
 }
 
@@ -105,15 +105,15 @@ html, body {
 
 .item__underlay {
   background: #FFF;
-  width: 160px;
-  height: 160px;
+  width: 100px;
+  height: 100px;
   position: relative;
   left: 50%;
-  margin: -160px 0 0 -80px;
+  margin: -100px 0 0 -50px;
 }
 
 .item__underlay.last {
-  height: calc(100% - 240px);
+  height: calc(100% - 140px);
   width: 100%;
   max-width: 600px;
   left: auto;
@@ -128,16 +128,16 @@ html, body {
   top: 0;
   opacity: 0;
   height: 240px;
-  line-height: 240px;
+  line-height: 140px;
   color: #FFF;
-  font-size: 36px;
+  font-size: 26px;
   font-weight: 300;
   z-index: 2;
   margin: 0;
 }
 
 .item__title.last {
-  left: 272px;
+  left: 182px;
   opacity: 1;
 }
 
@@ -163,5 +163,5 @@ html, body {
 .item__list.last {
   opacity: 1;
   top: 0;
-  margin-top: calc(-100vh + 280px);
+  margin-top: calc(-100vh + 205px);
 }
