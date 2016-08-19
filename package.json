@@ -2,7 +2,7 @@
   "name": "FLIP",
   "version": "0.1.9",
   "description": "A FLIP helper",
-  "main": "index.js",
+  "main": "dist/flip.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
