@@ -2,7 +2,7 @@
 
 A helper library for [FLIP animations](https://aerotwist.com/blog/flip-your-animations).
 
-[![FLIP Demos](https://cloud.githubusercontent.com/assets/617438/12309072/8be03324-ba40-11e5-8f6c-0e5c04f87336.png)](http://googlechrome.github.io/flipjs/)
+[![FLIP Demos](https://cloud.githubusercontent.com/assets/617438/12309072/8be03324-ba40-11e5-8f6c-0e5c04f87336.png)](http://googlearchive.github.io/flipjs/)
 
 FLIP is an approach to animations that remaps animating expensive properties, like width, height, left and top to significantly cheaper changes using transforms. It does this by taking two snapshots, one of the element's **First** position (F), another of its **Last** position (L). It then uses a transform to **Invert** (I) the element's changes, such that the element appears to still be in the First position. Lastly it **Plays** (P) the animation forward by removing the transformations applied in the Invert step.
 
@@ -63,8 +63,8 @@ let flip = new FLIP({
 
 ## Documentation & Demos
 
-  * [Demos](https://googlechrome.github.io/flipjs/) - There are more to make :)
-  * [API docs](https://googlechrome.github.io/flipjs/docs/FLIP.html).
+  * [Demos](https://googlearchive.github.io/flipjs/) - There are more to make :)
+  * [API docs](https://googlearchive.github.io/flipjs/docs/FLIP.html).
 
 ## New to FLIP?
 
